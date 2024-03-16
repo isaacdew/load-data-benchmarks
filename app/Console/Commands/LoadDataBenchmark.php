@@ -28,10 +28,7 @@ class LoadDataBenchmark extends Command
      */
     public function handle()
     {
-        // Clear the people table
-        Person::truncate();
-
-        $milliseconds = Benchmark::measure($this->loadData(...));
+        $milliseconds = Benchmark::measure($this->loadData(...), 3);
 
         $minutes = round($milliseconds / 1000, 0, PHP_ROUND_HALF_UP) / 60;
 
@@ -40,6 +37,9 @@ class LoadDataBenchmark extends Command
 
     protected function loadData()
     {
+        // Clear the people table
+        Person::truncate();
+
         LoadData::from(storage_path('app/test.csv'))
             ->to(Person::class)
             ->fieldsTerminatedBy(',')

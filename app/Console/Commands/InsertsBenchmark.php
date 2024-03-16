@@ -29,10 +29,7 @@ class InsertsBenchmark extends Command
      */
     public function handle()
     {
-        // Clear the people table
-        Person::truncate();
-
-        $milliseconds = Benchmark::measure($this->insertData(...));
+        $milliseconds = Benchmark::measure($this->insertData(...), 3);
 
         $minutes = round($milliseconds / 1000, 0, PHP_ROUND_HALF_UP) / 60;
 
@@ -42,6 +39,9 @@ class InsertsBenchmark extends Command
 
     protected function insertData()
     {
+        // Clear the people table
+        Person::truncate();
+
         // Disable unique checks and foreign key checks to speed up inserts
         DB::statement('SET @@session.unique_checks = 0');
         DB::statement('SET @@session.foreign_key_checks = 0');

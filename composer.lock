@@ -1047,16 +1047,16 @@
         },
         {
             "name": "isaacdew/load-data",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/isaacdew/load-data.git",
-                "reference": "06b978a5be3ef66d57574c394b96475c0a466d1b"
+                "reference": "70c7ac2946dc95b817cce90f8dddf64d90cca3b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/isaacdew/load-data/zipball/06b978a5be3ef66d57574c394b96475c0a466d1b",
-                "reference": "06b978a5be3ef66d57574c394b96475c0a466d1b",
+                "url": "https://api.github.com/repos/isaacdew/load-data/zipball/70c7ac2946dc95b817cce90f8dddf64d90cca3b4",
+                "reference": "70c7ac2946dc95b817cce90f8dddf64d90cca3b4",
                 "shasum": ""
             },
             "require-dev": {
@@ -1081,9 +1081,9 @@
             "description": "Fluent syntax for loading large CSV files into MySQL using LOAD DATA INFILE in Laravel.",
             "support": {
                 "issues": "https://github.com/isaacdew/load-data/issues",
-                "source": "https://github.com/isaacdew/load-data/tree/0.1.0"
+                "source": "https://github.com/isaacdew/load-data/tree/0.1.1"
             },
-            "time": "2024-03-10T02:26:44+00:00"
+            "time": "2024-03-16T22:20:20+00:00"
         },
         {
             "name": "laravel/framework",
